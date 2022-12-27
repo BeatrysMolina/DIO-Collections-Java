@@ -6,8 +6,6 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-
-
 public class StreamApi1 {
 
     public static void main (String[] args) {
@@ -38,7 +36,7 @@ public class StreamApi1 {
         System.out.println(listaParesMaioresQue2);
 
         System.out.print("\nMostre a média dos números:  ");
-        numerosAleatorios1.stream()
+        numerosAleatorios.stream()
             .mapToInt(Integer::parseInt)
             .average()
             .ifPresent(System.out::println);
