@@ -11,16 +11,16 @@ public class StreamApi1 {
     public static void main (String[] args) {
 
         List<String> numerosAleatorios = 
-            Arrays.asList("1, ", "0, ", "4, ", "1, ", "2, ", "3, ", "9, ", "9, ", "6, ", "5");
+            Arrays.asList("1", "0", "4", "1", "2", "3", "9", "9", "6", "5");
 
         System.out.print("\nImprima todos os elementos dessa lista de String: ");
-        numerosAleatorios.forEach(System.out::print);
+        numerosAleatorios.forEach(System.out::println);
 
         System.out.print("\nPegue os 5 primeiros números e coloque dentro de um Set:  ");
         numerosAleatorios.stream()
                 .limit(5)
                 .collect(Collectors.toSet())
-                .forEach(System.out::print);
+                .forEach(System.out::println);
         // Set<String> collectSet = numerosAleatorios.stream()
         //             .limit(5)
         //             .collect(Collectors.toSet());
@@ -41,9 +41,9 @@ public class StreamApi1 {
             .average()
             .ifPresent(System.out::println);
 
-        System.out.print("\nRemova os números ímpares:  ");
-        numerosAleatoriosInteger.removeIf(i -> (i % 2 != 0));
-        System.out.println(numerosAleatoriosInteger);
+        // System.out.print("\nRemova os números ímpares:  ");
+        // numerosAleatoriosInteger.removeIf(i -> (i % 2 != 0));
+        // System.out.println(numerosAleatoriosInteger);
 
     }
 }
