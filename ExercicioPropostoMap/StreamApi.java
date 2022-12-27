@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
 import java.util.TreeSet;
-import java.util.function.Function;
+// import java.util.function.Function;
 
 /**
  * Dadas as seguintes informações de id e contato, crie um dicionário e ordene este dicionário exibindo Nome id - Nome contato:
