@@ -27,13 +27,15 @@ public class StreamApi1 {
         
         System.out.print("\nTransforme essa lista de String em uma lista de números inteiros:  ");
         List<Integer> numerosAleatorios1 = numerosAleatorios.stream()
-                .map(t -> Integer.parseInt(t)).collect(Collectors.toList());
+                .map(t -> Integer.parseInt(t))
+                .collect(Collectors.toList());
 
         System.out.print("\nPegue os números pares e maiores que 2 e coloque em uma lista:  ");
-        List<Integer> listaParesMaioresQue2 = numerosAleatorios.stream()
+        List<Integer> listParesMaioresQue2 = numerosAleatorios.stream()
             .map(Integer::parseInt)
-            .filter(i -> (i % 2 == 0 && i > 2) ).collect(Collectors.toList());
-        System.out.println(listaParesMaioresQue2);
+            .filter(i -> (i % 2 == 0 && i > 2))
+            .collect(Collectors.toList());
+        System.out.println(listParesMaioresQue2);
 
         System.out.print("\nMostre a média dos números:  ");
         numerosAleatorios.stream()
@@ -41,9 +43,11 @@ public class StreamApi1 {
             .average()
             .ifPresent(System.out::println);
 
-        // System.out.print("\nRemova os números ímpares:  ");
-        // numerosAleatoriosInteger.removeIf(i -> (i % 2 != 0));
-        // System.out.println(numerosAleatoriosInteger);
-
+        System.out.print("\nRemova os números ímpares:  ");
+        List<Integer> numerosAleatoriosInteger = numerosAleatorios.stream()
+                .map(t -> Integer.parseInt(t))
+                .collect(Collectors.toList());
+        numerosAleatoriosInteger.removeIf(integer -> (integer % 2 != 0))
+        System.out.println(numerosAleatoriosInteger);
     }
 }
