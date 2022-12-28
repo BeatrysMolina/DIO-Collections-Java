@@ -2,9 +2,9 @@ package ExercicioPropostoMap;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Predicate;
+// import java.util.function.Predicate;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
+// import java.util.stream.Stream;
 
 public class StreamApi1 {
 
@@ -29,6 +29,7 @@ public class StreamApi1 {
         List<Integer> numerosAleatorios1 = numerosAleatorios.stream()
                 .map(t -> Integer.parseInt(t))
                 .collect(Collectors.toList());
+        System.out.println(numerosAleatorios1);
 
         System.out.print("\nPegue os números pares e maiores que 2 e coloque em uma lista:  ");
         List<Integer> listParesMaioresQue2 = numerosAleatorios.stream()
@@ -47,7 +48,7 @@ public class StreamApi1 {
         List<Integer> numerosAleatoriosInteger = numerosAleatorios.stream()
                 .map(t -> Integer.parseInt(t))
                 .collect(Collectors.toList());
-        numerosAleatoriosInteger.removeIf(integer -> (integer % 2 != 0))
+        numerosAleatoriosInteger.removeIf(integer -> (integer % 2 != 0));
         System.out.println(numerosAleatoriosInteger);
     }
 }
